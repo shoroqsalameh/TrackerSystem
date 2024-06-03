@@ -1,24 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
-    <link rel="stylesheet" href="styles.css">
+	<title>Login Page</title>
+	<link rel="stylesheet" type="text/css" href="css/loginPageCss.css">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-
 <body>
-    <header>
-        <h1>Login Page</h1>
-    </header>
-
-    <main>
-        <!-- Content for Login Page -->
-    </main>
-
-    <script src="utils.js" type="module"></script>
-    <script src="login.js" type="module"></script>
+	<img class="wave" src="media/wave (2).png" alt="wave">
+	<div class="container">
+		<div class="img">
+			<img src="media/bg.png" alt="bg">
+		</div>
+		<div class="login-content">
+			<form onsubmit="onclick_function(event)">
+				<img src="media/avatar.png">
+				<h2 class="title">Welcome</h2>
+           		<div class="input-div one">
+           		   <div class="i">
+           		   		<i class="fas fa-user"></i>
+           		   </div>
+           		   <div class="div">
+           		   		<h5>email</h5>
+           		   		<input type="email" class="input" name="email" id="email">
+           		   </div>
+           		</div>
+           		<div class="input-div pass">
+           		   <div class="i"> 
+           		    	<i class="fas fa-lock"></i>
+           		   </div>
+           		   <div class="div">
+           		    	<h5>Password</h5>
+           		    	<input type="password" class="input" name="password" id="password">
+            	   </div>
+            	</div>
+            	<a href="#">Forgot Password?</a>
+            	<input type="submit" class="btn" value="Login" id="submitBtn" onclick="onclick_function(event)">
+                <!-- <a href="" class="btn" id="a" onclick="onclick_function()">Login</a> -->
+                <p id="alret" style="color:red;"></p>
+            </form>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/login.js"></script>
 </body>
-
 </html>
