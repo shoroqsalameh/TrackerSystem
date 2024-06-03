@@ -2,29 +2,211 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trainees Page</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" >
+  <title>Add Student</title>
+  <link rel="stylesheet" href="Css/trainees.css" >
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
 </head>
 
 <body>
-    <header>
-        <h1>Trainees Page</h1>
-        <nav>
-            <ul>
-                <li><a href="trainers.html">Trainers</a></li>
-                <li><a href="login.html">Logout</a></li>
-            </ul>
-        </nav>
-    </header>
+  <div class="container">
+    <nav>
+      <ul>
+        <li><a href="#" class="logo">
+            <img src="Media/logo-no-background.png" alt="profile photo">
+            <span class="nav-item">Trainers</span>
+          </a></li>
+        <li><a class="link_side" href="news.html">
+            <i class="fa-solid fa-house fas"></i>
+            <span class="nav-item">Home</span>
+          </a></li>
+        <li><a class="link_side" href="trainees.html">
+            <i class="fa-solid fa-people-group fas"></i>
+            <span class="nav-item">Trainees</span>
+          </a></li>
+        <li><a class="link_side" href="todo.html">
+            <i class="fa-solid fa-comment fas"></i>
+            <span class="nav-item">Note</span>
+          </a></li>
+        <li><a class="link_side" href="profile.html">
+            <i class="fa-solid fa-user fas"></i>
+            <span class="nav-item">Profile</span>
+          </a></li>
 
-    <main>
-        <!-- Content for Trainees Page -->
-    </main>
 
-    <script src="utils.js" type="module"></script>
-    <script src="trainees.js" type="module"></script>
+        <li><a class="link_side"  class="logout" onclick="logout()">
+            <i class="fas fa-sign-out-alt fas"></i>
+            <span class="nav-item">Log out</span>
+          </a></li>
+      </ul>
+    </nav>
+
+    <main class="table">
+      <section class="table__header">
+        <h1>Trainees</h1>
+        <div class="action_btn">
+          <button class="btn" id="btn_1">Add Student</button>
+          <button class="btn" id="btn_2">Add Task</button>
+          <button class="btn" id="btn_3">Add Feedback</button>
+        </div>
+
+
+      </section>
+      <section class="table__body">
+        <table>
+          <thead>
+            <tr>
+              <th> Id <span class="icon-arrow">&UpArrow;</span></th>
+              <th> Name <span class="icon-arrow">&UpArrow;</span></th>
+              <th> Solved Task <span class="icon-arrow">&UpArrow;</span></th>
+              <th> Total Task <span class="icon-arrow">&UpArrow;</span></th>
+              <th> Absences <span class="icon-arrow">&UpArrow;</span></th>
+              <th> Actions <span class="icon-arrow">&UpArrow;</span></th>
+            </tr>
+          </thead>
+          <tbody>
+
+            <tr>
+              <td></td>
+              <td></td>
+              <td>100<i id='icon' class="fa-solid fa-plus plus" onclick="addsol()"></i></td>
+              <td class="test">0</td>
+              <td></td>
+              <td>
+                <a class="link_table" href="#">
+                  <i class="fa-solid fa-pen-to-square fas"></i>
+                </a>
+                <a class="link_table" href="#">
+                  <i style="margin-right: 30px;" class="fa-solid fa-trash fas"></i>
+                </a>
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
+      </section>
+      <br>
+
+      <!--start code for the feedbackTable-->
+      <hr>
+      <section class="table__header">
+        <h1>Feedback</h1>
+    </section><br>
+        <section class="table__body">
+          <table>
+            <thead>
+              <tr>
+                <th> Student Name <span class="icon-arrow">&UpArrow;</span></th>
+                <th> Trainer Name <span class="icon-arrow">&UpArrow;</span></th>
+                <th> Feedback <span class="icon-arrow">&UpArrow;</span></th>
+                <th> Date <span class="icon-arrow">&UpArrow;</span></th>
+              </tr>
+            </thead>
+            <tbody id="tableBody">
+            </tbody>
+          </table>
+        </section>
+      <!--end code for the feedbackTable-->
+
+      <div class="popup">
+        <div class="close-btn">&times;</div>
+        <form class="form">
+          <h2>Add Trainees</h2>
+          <div class="form-element">
+            <label>First Name</label>
+            <input type="text" id="FirstName" placeholder="Enter First Name">
+          </div>
+
+          <div class="form-element">
+            <label>Last Name</label>
+            <input type="text" id="LastName" placeholder="Enter Last Name">
+          </div>
+
+        
+          <div class="form-element">
+            <label>Task</label>
+            <input type="number" id="task" placeholder="Enter Task Number">
+
+          </div>
+
+          <div class="form-element">
+            <label>Absence</label>
+            <input type="number" id="absence" placeholder="Enter Absence Number">
+
+          </div>
+
+          <div class="form-element">
+            <button>Add Trainees</button>
+            <!-- <input type="button" class="button" value="Add Trainees"> -->
+          </div>
+        </form>
+      </div>
+
+  </div>
+
+
+  <div class="popup_task">
+    <div class="close-btn">&times;</div>
+    <h2>Add Task</h2>
+    <div class="counter">
+      <div class="text-counter">
+        <div class="text-field" id="Totaltask">
+          0
+        </div>
+
+        <div class="buttons-container">
+          <button class="up-btn btn" onclick="settotal()">Up</button>
+          <button class="down-btn btn">Down</button>
+          <button class="reset-btn btn">reset</button>
+          <button class="" onclick="add()">Add</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--code for the addFeedback-->
+  <div class="popup3">
+    <div class="close-btn">&times;</div>
+    <form class="form">
+      <h2>Add Feedback</h2>
+      <div class="form-element">
+        <label>Doctor Name</label>
+        <input type="text" id="doctorName" placeholder="Enter Doctor Name">
+      </div>
+
+      <div class="form-element">
+        <label for="studentSelect">Select a Student:</label>
+        <select name="studentSelect" id="studentSelect">
+          <!--options from localStorge-->
+        </select>
+      </div>
+
+
+      <div class="form-element">
+        <label>Feedback</label><br>
+        <textarea name="" id="feedback" cols="30" rows="10" placeholder="Enter Your Feedback"></textarea>
+
+      </div>
+
+      <div class="form-element">
+        <button onclick="onclick_function()">Add Feedback</button>
+        
+      </div>
+    </form>
+  </div>
+  </main>
+
+  </div>
+  <!--end of the addFeedback-->
+
+
+
+
+  <script src="js/trainees.js"></script>
+
 </body>
+
+</html>
 
 </html>
