@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add News</title>
+    <link rel="stylesheet" href="css/addnews.css">
+    <link rel="stylesheet" href="css/Sidebar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script> <!-- SweetAlert CDN -->
+</head>
+<body>
+    <div class="wrapper">
+        <nav>
+            <ul>
+                <li><a href="#" class="logo">
+                    <img src="media/logo-no-background.png" alt="Logo">
+                    <span class="nav-item">Adam</span>
+                </a></li>
+                <li><a class="link_side" href="Add-Trainers.html">
+                    <i class="fa-solid fa-people-group fas"></i>
+                    <span class="nav-item">Trainers</span>
+                </a></li>
+                <li><a class="link_side" href="feedback.html">
+                    <i class="fa-solid fa-comment fas"></i>
+                    <span class="nav-item">Feedback</span>
+                </a></li>
+                <li><a class="link_side" href="trainer.html">
+                    <i class="fa-solid fa-table fas"></i>
+                    <span class="nav-item">View Users</span>
+                </a></li>
+                <li><a class="link_side logout" href="#" onclick="logout()">
+                    <i class="fas fa-sign-out-alt fas"></i>
+                    <span class="nav-item">Log out</span>
+                </a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="container">
+        <header>
+            <h1>Add News</h1>
+            <p>Share the latest news here</p>
+        </header>
+        <div class="crud">
+            <form onsubmit="addNews(event)">
+                <input type="url" name="image" id="image" placeholder="Image URL" class="input" required>
+                <textarea name="description" id="description" placeholder="Description" class="input" required></textarea>
+                <button type="submit" class="Addbtn">Add News</button>
+                <p id="alert" style="color:red;"></p>
+            </form>
+        </div>
+    </div>
+    
+    <script src="js/Add-News.js"></script>
+</body>
+</html>

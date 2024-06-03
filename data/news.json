@@ -1,0 +1,48 @@
+{ "news":[
+    {
+        
+        "image": "images/3.PNG",
+        "description": "Orange Company announces a significant expansion plan to reach new markets and enhance customer satisfaction."
+    },
+    {
+        
+        "image": "images/4.PNG",
+        "description": "Exciting news! Orange Company is gearing up for a grand product launch event showcasing innovative solutions for our customers."
+    },
+    {
+       
+        "image": "images/Picture7.jpg",
+        "description": "We are proud to recognize the hard work and dedication of our employees. Stay tuned for the Employee of the Month announcement!"
+    },
+    {
+       
+        "image": "images/unnamed.jpg",
+        "description": "We are proud to recognize the hard work and dedication of our employees. Stay tuned for the Employee of the Month announcement!"
+    },
+    {
+       
+        "image": "images/data.png",
+        "description": "We are proud to recognize the hard work and dedication of our employees. Stay tuned for the Employee of the Month announcement!"
+    },
+    {
+       
+        "image": "images/unnamed.jpg",
+        "description": "We are proud to recognize the hard work and dedication of our employees. Stay tuned for the Employee of the Month announcement!"
+    },
+    {
+       
+        "image": "images/unnamed.jpg",
+        "description": "We are proud to recognize the hard work and dedication of our employees. Stay tuned for the Employee of the Month announcement!"
+    },
+    {
+       
+        "image": "images/unnamed.jpg",
+        "description": "We are proud to recognize the hard work and dedication of our employees. Stay tuned for the Employee of the Month announcement!"
+    },
+    {
+       
+        "image": "images/unnamed.jpg",
+        "description": "We are proud to recognize the hard work and dedication of our employees. Stay tuned for the Employee of the Month announcement!"
+    }
+]
+}

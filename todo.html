@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/todo.css">
+    <link rel="stylesheet" href="css/Sidebar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+</head>
+<body>
+    <div class="sidebar">
+        <nav>
+            <ul>
+              <li><a href="#" class="logo">
+                  <img src="Media/logo-no-background.png" alt="profile photo">
+                  <span class="nav-item">Trainers</span>
+                </a></li>
+              <li><a class="link_side" href="news.html">
+                  <i class="fa-solid fa-house fas"></i>
+                  <span class="nav-item">Home</span>
+                </a></li>
+              <li><a class="link_side" href="trainees.html">
+                  <i class="fa-solid fa-people-group fas"></i>
+                  <span class="nav-item">Trainees</span>
+                </a></li>
+              <li><a class="link_side" href="todo.html">
+                  <i class="fa-solid fa-comment fas"></i>
+                  <span class="nav-item">Note</span>
+                </a></li>
+              <li><a class="link_side" href="profile.html">
+                  <i class="fa-solid fa-user fas"></i>
+                  <span class="nav-item">Profile</span>
+                </a></li>
+      
+      
+              <li><a class="link_side" class="logout" onclick="()=>
+                localStorage.clear();
+                window.location.replace('loginPage.html');
+                ">
+                  <i class="fas fa-sign-out-alt fas"></i>
+                  <span class="nav-item">Log out</span>
+                </a></li>
+            </ul>
+          </nav>
+    </div>
+    <div class="container">
+    <div class="note">
+    
+    <input type="text" name="note" id="value" placeholder="add your note">
+    <button onclick="fun()" >Add note</button>
+    </div>
+    <div class="content">
+       <table>
+        <tbody id="tbody">
+       
+       
+        </tbody>
+       </table>
+       <button onclick="clearta()" id="cbtn">clear</button>
+    </div>
+</div>
+<Script>
+let arr=[];
+let tbody=document.getElementById('tbody');
+
+function fun(){
+let inp=document.getElementById('value');
+let text = `
+<tr>
+            <td>${inp.value}</td>
+            
+            <td><button onclick='deleteRow(this)'>Delete</button></td>
+        </tr>
+`;
+
+tbody.innerHTML+= text;
+inp.value="";
+let btn =document.getElementById('cbtn');
+btn.style.display="block"
+}
+function clearta(){
+    tbody.innerHTML= "";
+}
+console.log(arr);
+function deleteRow(button) {
+            
+            let row = button.parentNode.parentNode;
+            row.parentNode.removeChild(row);
+        }
+</Script>
+</body>
+</html>

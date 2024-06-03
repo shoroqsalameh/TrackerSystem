@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Trainers</title> 
+    <link rel="stylesheet" href="css/Add-Trainers.css">
+    <link rel="stylesheet" href="css/Sidebar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+</head>
+<body>
+    <div class="wrapper">
+        <nav>
+            <ul>
+                <li><a href="#" class="logo">
+                    <img src="media/logo-no-background.png" alt="Logo">
+                    <span class="nav-item">Adam</span>
+                </a></li>
+                <li><a class="link_side" href="Add-Trainers.html">
+                    <i class="fa-solid fa-people-group fas"></i>
+                    <span class="nav-item">Trainers</span>
+                </a></li>
+                <li><a class="link_side" href="feedback.html">
+                    <i class="fa-solid fa-comment fas"></i>
+                    <span class="nav-item">Feedback</span>
+                </a></li>
+                <li><a class="link_side" href="trainer.html">
+                    <i class="fa-solid fa-table fas"></i>
+                    <span class="nav-item">View Users</span>
+                </a></li>
+                <li><a class="link_side logout" href="#" onclick="logout()">
+                    <i class="fas fa-sign-out-alt fas"></i>
+                    <span class="nav-item">Log out</span>
+                </a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="container">
+        <header>
+            <h1>Trainers</h1>
+            <p>Trainers Modify system</p>
+        </header>
+        <div class="crud">
+            <form onsubmit="createAccount(event)">
+                <input type="text" name="name" id="fullname" placeholder="Full name" class="input" required>
+                <input type="email" name="email" id="email" placeholder="Email" class="input" required>
+                <input type="password" name="password" id="password" placeholder="Password" class="input" required>
+                <button type="submit" class="Addbtn">Create Account</button>
+                <p id="alert" style="color:red;"></p>
+            </form>
+        </div>
+    </div>
+    
+    <script src="js/Add-Trainers.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Users</title>
+    <link rel="stylesheet" href="css/Add-Trainers.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <div class="wrapper">
+        <nav>
+            <ul>
+                <li><a href="#" class="logo">
+                    <img src="media/logo-no-background.png" alt="Logo">
+                    <span class="nav-item">Adam</span>
+                </a></li>
+                <li><a class="link_side" href="Add-Traineers.html">
+                    <i class="fa-solid fa-people-group fas"></i>
+                    <span class="nav-item">Trainers</span>
+                </a></li>
+                <li><a class="link_side" href="feedback.html">
+                    <i class="fa-solid fa-comment fas"></i>
+                    <span class="nav-item">Feedback</span>
+                </a></li>
+                <li><a class="link_side" href="trainer.html">
+                    <i class="fa-solid fa-table fas"></i>
+                    <span class="nav-item">View Users</span>
+                </a></li>
+                <li><a class="link_side logout" href="#" onclick="logout()">
+                    <i class="fas fa-sign-out-alt fas"></i>
+                    <span class="nav-item">Log out</span>
+                </a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="container">
+        <header>
+            <h1>View Users</h1>
+            <p>User Details</p>
+        </header>
+        <div class="user-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Full Name</th>
+                        <th>Email</th>
+                        <th>Area of Expertise</th>
+                        <th>Years of Experience</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="userTableBody"></tbody>
+            </table>
+        </div>
+    </div>
+    <script src="JS/trainers.js"></script>
+</body>
+</html>

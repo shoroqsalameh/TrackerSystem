@@ -1,0 +1,125 @@
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Poppins',sans-serif;
+}
+body{
+     display: flex;
+     background-color: #d9d9d9;
+}
+.profile-card{
+    width: 520px;
+    height: 100vh;
+    margin: auto;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    background-color: rgb(226, 226, 226);
+    box-shadow: 2px 4px 10px 2px rgba(0, 0, 0, 0.5);
+    position: relative;
+    padding-top: 10px;
+}
+
+.image-container img{
+    width: 60%;
+    align-items: center;
+    margin-left: 100px;
+    margin-top: 20px;
+    height: 18rem;
+    position: relative;
+    row-gap: 5px;
+    /* padding: 25px 0; */
+    border-radius: 8%;
+    border: 1px solid #004138;
+}
+.image-container img:hover{
+    opacity: 0.4;
+}
+
+.info{
+    left: 200px;
+    align-items: center;
+}
+label{
+    position: absolute;
+    left: 100px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    transition: 0.6s;
+    margin-top: 50px;
+    color: #7bcab9;
+    font-size: 18px;
+}
+
+input{
+    width: 320px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    margin-top: 40px;
+    margin-left: 10px;
+}
+
+.group-input {
+    margin:0 20px 0 80px;
+    border-bottom: 2px solid #d9d9d9;
+}
+
+.group-input input:focus~label,
+.group-input input:valid~label {
+    top: 5px;
+}
+/* .group-input, input:hover{
+    transition: all 0.5s ease;
+    /* opacity: 0.5;
+    004138 
+} */
+button{
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    margin-left: 160px;
+    background-color: #004138;
+    color: #fff;
+    width: 40%;
+    outline: none;
+    border-radius: 7px;
+    cursor: pointer;
+}
+button:hover{
+    background-color: #7bcab9;
+}
+
+@media only screen and (max-width: 600px) {
+    .profile-card {
+        width: 90%;
+    }
+
+    label {
+        left: 5%;
+    }
+
+    input {
+        width: 80%;
+    }
+
+    .group-input {
+        margin: 0 5% 0 5%;
+    }
+
+    button {
+        margin-left: 5%;
+        width: 80%;
+    }
+}
+
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}

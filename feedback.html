@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="input-group">
+            <label for="doctorName">Doctor Name:</label>
+            <input type="text" id="doctorName" class="input" placeholder="Doctor Name">
+        </div>
+        <div class="input-group">
+            <label for="studentSelect">Select Student:</label>
+            <select id="studentSelect" class="input">
+            </select>
+        </div>
+        <div class="input-group">
+            <label for="feedback">Feedback:</label>
+            <textarea id="feedback" class="input" placeholder="Enter your feedback"></textarea>
+        </div>
+        <button type="button" class="btn" onclick="submitFeedback()">Submit</button>
+    </div>
+    <script src="feedback.js"></script>
+</body>
+</html>
