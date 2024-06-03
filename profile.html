@@ -1,18 +1,82 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Profile</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="css/Sidebar.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <div class="container">
-        <h2>User Profile</h2>
-        <div id="profileInfo">
-        </div>
-        <button onclick="logout()" class="btn">Logout</button>
+    <nav>
+        <ul>
+          <li><a href="#" class="logo">
+              <img src="Media/logo-no-background.png" alt="profile photo">
+              <span class="nav-item">Trainers</span>
+            </a></li>
+          <li><a class="link_side" href="news.html">
+              <i class="fa-solid fa-house fas"></i>
+              <span class="nav-item">Home</span>
+            </a></li>
+          <li><a class="link_side" href="trainees.html">
+              <i class="fa-solid fa-people-group fas"></i>
+              <span class="nav-item">Trainees</span>
+            </a></li>
+          <li><a class="link_side" href="todo.html">
+              <i class="fa-solid fa-comment fas"></i>
+              <span class="nav-item">Note</span>
+            </a></li>
+          <li><a class="link_side" href="profile.html">
+              <i class="fa-solid fa-user fas"></i>
+              <span class="nav-item">Profile</span>
+            </a></li>
+  
+  
+          <li><a class="link_side"  class="logout" onclick="()=>
+            localStorage.clear();
+            window.location.replace('loginPage.html');
+            ">
+              <i class="fas fa-sign-out-alt fas"></i>
+              <span class="nav-item">Log out</span>
+            </a></li>
+        </ul>
+      </nav>
+  
+   <div class="profile-card">
+    <div class="image-container">
+    <img src="media/profilepicture.jpg"  width="10%">
     </div>
-    <script src="profile.js"></script>
+    <div class="info">
+
+        <div class="group-input">
+           <label for="firstName">First Name:</label><br>
+           <input type="text" id="firstName" name="firstName" oninput="saveChanges()" required >
+        </div>
+
+        <div class="group-input">
+           <label for="lastName">Last Name:</label><br>
+           <input type="text" id="lastName" name="lastName" oninput="saveChanges()" required>
+        </div>
+
+        <div class="group-input">
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" oninput="saveChanges()" required>
+        </div>
+
+        <div class="group-input">
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password" oninput="saveChanges()" required>
+        </div>
+            <button type="button" id="edit" onclick="editProfile()"><i class="fa-regular fa-pen-to-square"></i></button>
+            <button type="submit" id="saveBtn"  onclick="saveChanges()"  style="display: none;"><i class="fa-solid fa-bookmark"></i></button>
+    </div>
+   </div>
 </body>
+
+<script src="js/profile.js"></script>
 </html>
+
